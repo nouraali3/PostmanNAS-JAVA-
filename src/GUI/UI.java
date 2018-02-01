@@ -39,7 +39,7 @@ public class UI extends javax.swing.JFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("SimHei", 3, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SimHei", 3, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(138, 62, 11));
         jLabel1.setText("url");
 
@@ -50,11 +50,11 @@ public class UI extends javax.swing.JFrame
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("SimHei", 3, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("SimHei", 3, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(138, 62, 11));
         jLabel3.setText("response");
 
-        jLabel4.setFont(new java.awt.Font("SimHei", 3, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("SimHei", 3, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(138, 62, 11));
         jLabel4.setText("status");
 
@@ -67,7 +67,7 @@ public class UI extends javax.swing.JFrame
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("SimHei", 3, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("SimHei", 3, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(138, 62, 11));
         jLabel2.setText("request");
 
@@ -92,7 +92,7 @@ public class UI extends javax.swing.JFrame
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("SimHei", 3, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("SimHei", 3, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(138, 62, 11));
         jLabel5.setText("control bit");
 
@@ -150,8 +150,8 @@ public class UI extends javax.swing.JFrame
                         .addGap(17, 17, 17))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(statustxt, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
+                            .addComponent(jLabel4)
+                            .addComponent(statustxt, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -183,8 +183,8 @@ public class UI extends javax.swing.JFrame
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(statustxt, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())

@@ -18,8 +18,6 @@ public class PostmanSimulator
 {
     URL url;
     String responseCode;
-    String responseLength;
-    long responseDate;
     String[] responseArray  ;
     public void GETRequest(String userUrl) throws JSONException 
     {
@@ -61,13 +59,6 @@ public class PostmanSimulator
         String id               =jsonResponse.getString("id");
         JSONArray datasets      =jsonResponse.getJSONArray("datasets");
 
-
-//        System.out.println(fields);
-//        System.out.println(attributes);
-//        System.out.println(schema_version);
-//        System.out.println(remote);
-//        System.out.println(id);
-//        System.out.println(datasets);
         responseArray=new String[]{"{ \n","\"fields\": ",fields.toString(),"\n \"attributes\": ",attributes.toString(),"\n \"schema_version\": ",Integer.toString(schema_version),"\n \"remote\": ",Boolean.toString(remote),"\n \"id\": ",id,"\n \"datasets\": ",datasets.toString(),"\n }"};
     }
     
@@ -83,17 +74,15 @@ public class PostmanSimulator
             
             con.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+            wr.writeBytes("{ \"command_name\" : \"control.bits.write\", \"command_parameters\" : {\"control_bits\" :"+ Integer.parseInt(controlBit) +" }}");
             
             responseCode=Integer.toString(con.getResponseCode());
             responseCode+=" ";
             responseCode+=con.getResponseMessage();
-            responseLength=Integer.toString(con.getContentLength());
             
-            wr.writeBytes("{ \"command_name\" : \"control.bits.write\", \"command_parameters\" : {\"control_bits\" :"+ controlBit +" }}");
             wr.flush();
             wr.close();
-            
-            
+                        
             }
             catch (MalformedURLException e1) 
                 { e1.printStackTrace();} 
